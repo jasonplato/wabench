@@ -18,7 +18,7 @@ OPT=-O2
 WASMCC = ${HOME}/wasi-sdk/wasi-sdk-10.0/bin/${CLANG} \
          --sysroot ${HOME}/wasi-sdk/wasi-sdk-10.0/share/wasi-sysroot
 
-all: ${Native} ${WASM}
+all: ${Native}
 
 %.o: %.${SRCSUFFIX}
 	${CC} ${CFLAGS} ${OPT} ${CINCLUDE} -c $< -o $@
